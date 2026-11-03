@@ -1,0 +1,56 @@
+LƯU Ý: Bản này đã được chuyển các chức năng CRUD sang SQL Server.
+Xem HUONG_DAN_SQL_SERVER.txt trước khi chạy.
+
+QUAN LY QUAY THUOC - C# WINFORMS (.NET 10)
+Ban bo sung: NHAN VIEN + DON VI TINH + HOA DON
+
+1. Giai nen ZIP va mo QuanLyQuanThuoc.slnx bang Visual Studio co ho tro .NET 10 (Windows Forms).
+2. Neu Visual Studio hoi Restore NuGet Packages, dong y Restore.
+3. Chay F5, dang nhap bang thong tin da co trong project goc.
+4. Menu trai gom: Trang chu, Quan ly thuoc, Danh muc thuoc, Don vi tinh, Hoa don, Nhan vien.
+
+A. DON VI TINH
+- Co san 5 don vi mau: Vien, Hop, Lo, Chai, Tuyp (hien thi co dau trong form).
+- Nhap ma don vi, ten don vi, mo ta; bam Them de them.
+- Bam 1 hang trong bang de Sua/Xoa. Ma don vi khong doi khi sua.
+- Xoa bi chan neu co thuoc dang su dung don vi do.
+- Doi ten don vi se dong bo voi thuoc va luu sau khi thanh cong.
+- Tim kiem theo ma, ten, mo ta; Lam moi de nhap moi.
+
+B. HOA DON
+- Nhap ma hoa don, ngay lap, ten khach, SDT (co the de trong), nhan vien ban, ghi chu.
+- Chon mot thuoc, nhap so luong, bam '+ Them thuoc'; co the them nhieu dong.
+- De bo dong: chon dong o bang CHI TIET, bam 'Xoa dong'.
+- Tong tien tu dong tinh theo so luong * don gia cua thuoc.
+- Bam Them de luu hoa don. De Sua/Xoa, chon mot hang o bang HOA DON (ben duoi).
+- Tim kiem theo ma hoa don, khach hang, SDT, nhan vien; Lam moi de tao hoa don khac.
+- Ma hoa don khong duoc trung. Du lieu hoa don giu ban chup gia, ten thuoc, nhan vien tai thoi diem luu.
+- CHU Y: Hoa don CHUA TU DONG TRU TON KHO, CHUA IN HOA DON, CHUA KET NOI SQL SERVER.
+
+C. QUAN LY THUOC
+- Danh sach Don vi tinh cua form Quan ly thuoc lay tu menu Don vi tinh (khong con dong cung 5 muc).
+- Them/Sua/Xoa thuoc duoc luu JSON (truoc day chi nam trong RAM). Ma thuoc khong doi khi sua.
+
+D. NHAN VIEN
+- Giu lai module Nhan vien cua ban truoc. Chon nhan vien dang lam khi tao hoa don.
+
+FILE DU LIEU KHI CHAY (CHUA PHAT SINH THI KHONG CO FILE):
+%LOCALAPPDATA%\QuanLyQuanThuoc\nhanvien.json
+%LOCALAPPDATA%\QuanLyQuanThuoc\donvitinh.json
+%LOCALAPPDATA%\QuanLyQuanThuoc\thuoc.json
+%LOCALAPPDATA%\QuanLyQuanThuoc\hoadon.json
+
+DU LIEU GOC:
+- Thuoc, don vi va nhan vien co du lieu mau khi chua co JSON; hoa don ban dau rong.
+- Co the chinh bo cuc tren Form...Designer.cs/Visual Studio Designer.
+- Phien ban nay dung JSON de co the chay truc tiep ma khong can cai SQL Server.
+
+CACH TEST NHANH:
+1. Vao Don vi tinh, them DVT006 - Goi, xem xuat hien trong danh sach.
+2. Vao Quan ly thuoc, them T004 - Thuoc test - Goi - So luong 10 - Don gia 15000.
+3. Vao Hoa don, nhap HD001 - khach 'Nguyen Van A', chon nhan vien, them T004 so luong 2.
+4. Kiem tra tong tien hien 30.000 d, bam Them, tim HD001 o bang hoa don.
+5. Dong/mở lai ung dung; du lieu thuoc, don vi va hoa don phai con.
+
+LUU Y:
+- Chua co kha nang build/chay Windows Forms tren moi truong dong goi hien tai; ban can build tren Visual Studio Windows. Neu co loi build hay Designer, gui anh Error List de xu ly.
